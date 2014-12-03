@@ -9,10 +9,62 @@
     <Reference Include="Protobuild" />
   </References>
   <Files>
+    <Compile Include="..\Protobuild.Internal\Packages\Reduplicator.cs">
+      <Link>Packages\Reduplicator.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\TAR\DataWriter.cs">
+      <Link>TAR\DataWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\TAR\IArchiveDataWriter.cs">
+      <Link>TAR\IArchiveDataWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\TAR\ITarHeader.cs">
+      <Link>TAR\ITarHeader.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\TAR\LegacyTarWriter.cs">
+      <Link>TAR\LegacyTarWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\TAR\TarException.cs">
+      <Link>TAR\TarException.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\TAR\TarHeader.cs">
+      <Link>TAR\TarHeader.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\TAR\TarReader.cs">
+      <Link>TAR\TarReader.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\TAR\TarWriter.cs">
+      <Link>TAR\TarWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\TAR\UsTarHeader.cs">
+      <Link>TAR\UsTarHeader.cs</Link>
+    </Compile>
+    <Compile Include="BasicGenerationWorksTest.cs" />
+    <Compile Include="BasicSynchronisationWorksTest.cs" />
+    <Compile Include="DefaultStartupProjectTest.cs" />
     <Compile Include="ExampleCocos2DXNATest.cs" />
     <Compile Include="ExampleCSToolsTest.cs" />
     <Compile Include="ExampleMonoGameTest.cs" />
+    <Compile Include="ExternalProjectReferencesAreFlattenedTest.cs" />
+    <Compile Include="ExtractXSLTWorksTest.cs" />
+    <Compile Include="NativeBinaryPresentTest.cs" />
+    <Compile Include="NuGetPackagesDetectedFromParentTest.cs" />
+    <Compile Include="NuGetPackagesDetectedFromParentWithRootPathDotSlashTest.cs" />
+    <Compile Include="NuGetPackagesDetectedFromParentWithRootPathDotTest.cs" />
+    <Compile Include="NuGetPortableLibraryDetectedTest.cs" />
+    <Compile Include="NuGetPortableLibraryDetectedWithRootPathDotSlashTest.cs" />
+    <Compile Include="NuGetPortableLibraryDetectedWithRootPathDotTest.cs" />
+    <Compile Include="PackageEverythingCorrectGZipTest.cs" />
+    <Compile Include="PackageEverythingCorrectLZMATest.cs" />
+    <Compile Include="PackageEverythingFailWhenBuildModuleXmlNotPresent.cs" />
+    <Compile Include="PackageEverythingFailWhenBuildNotPresent.cs" />
+    <Compile Include="PackageEverythingFailWhenBuildProjectsNotPresent.cs" />
+    <Compile Include="PackageEverythingFailWhenProtobuildPresent.cs" />
+    <Compile Include="PackageFilterCorrectModuleXmlTest.cs" />
+    <Compile Include="PackageFilterCorrectTest.cs" />
+    <Compile Include="ProjectSpecificOutputFolderTest.cs" />
     <Compile Include="ProtobuildTest.cs" />
+    <Compile Include="ResyncPreventedWhenSyncIsDisabledTest.cs" />
     <Compile Include="ServicesCrossProjectRequireTest.cs" />
     <Compile Include="ServicesDefaultForRootTest.cs" />
     <Compile Include="ServicesDependenciesPlatformsTest.cs" />
@@ -28,6 +80,7 @@
     <Content Include="TestData\ExampleCSTools\CSTools\Build\Module.xml" />
     <Content Include="TestData\ExampleMonoGame\Build\Module.xml" />
     <Content Include="TestData\ExampleMonoGame\MonoGame\Build\Module.xml" />
+    <Content Include="TestData\ProjectSpecificOutputFolder\Build\Module.xml" />
     <Content Include="TestData\ServicesBaseTest\Build\Module.xml" />
     <Content Include="TestData\ServicesBaseTest\Submodule\Build\Module.xml" />
     <Content Include="TestData\ServicesCrossProjectRequire\Build\Module.xml" />
@@ -49,6 +102,22 @@
     <Content Include="TestData\ServicesRelativeRequire\Build\Module.xml" />
     <Content Include="TestData\ServicesRelativeRequire\Submodule\Build\Module.xml" />
     <None Include="packages.config" />
+    <None Include="TestData\BasicGenerationWorks\Build\Module.xml" />
+    <None Include="TestData\BasicGenerationWorks\Build\Projects\Console.definition" />
+    <None Include="TestData\BasicGenerationWorks\Console\Program.cs" />
+    <None Include="TestData\BasicSynchronisationWorks\Build\Module.xml" />
+    <None Include="TestData\BasicSynchronisationWorks\Build\Projects\Console.definition" />
+    <None Include="TestData\BasicSynchronisationWorks\Console\Program.cs" />
+    <None Include="TestData\DefaultProjectExplicitlySet\Build\Module.xml" />
+    <None Include="TestData\DefaultProjectExplicitlySet\Build\Projects\ConsoleA.definition" />
+    <None Include="TestData\DefaultProjectExplicitlySet\Build\Projects\ConsoleB.definition" />
+    <None Include="TestData\DefaultProjectExplicitlySet\ConsoleA\Program.cs" />
+    <None Include="TestData\DefaultProjectExplicitlySet\ConsoleB\Program.cs" />
+    <None Include="TestData\DefaultProjectNotSet\Build\Module.xml" />
+    <None Include="TestData\DefaultProjectNotSet\Build\Projects\ConsoleA.definition" />
+    <None Include="TestData\DefaultProjectNotSet\Build\Projects\ConsoleB.definition" />
+    <None Include="TestData\DefaultProjectNotSet\ConsoleA\Program.cs" />
+    <None Include="TestData\DefaultProjectNotSet\ConsoleB\Program.cs" />
     <None Include="TestData\ExampleCocos2DXNA\Build\Projects\Cocos2DXNA.definition">
       <SubType>Designer</SubType>
     </None>
@@ -67,6 +136,95 @@
     <None Include="TestData\ExampleMonoGame\MonoGame\Build\Projects\MonoGame.Framework.definition" />
     <None Include="TestData\ExampleMonoGame\MonoGame\MonoGame.Framework\MyClass.DirectX.cs" />
     <None Include="TestData\ExampleMonoGame\MonoGame\MonoGame.Framework\MyClass.OpenGL.cs" />
+    <None Include="TestData\ExternalProjectReferencesAreFlattened\Build\Module.xml" />
+    <None Include="TestData\ExternalProjectReferencesAreFlattened\Build\Projects\Console.definition" />
+    <None Include="TestData\ExternalProjectReferencesAreFlattened\Build\Projects\ExternalA.definition" />
+    <None Include="TestData\ExternalProjectReferencesAreFlattened\Build\Projects\ExternalB.definition" />
+    <None Include="TestData\ExternalProjectReferencesAreFlattened\Build\Projects\ExternalC.definition" />
+    <None Include="TestData\ExternalProjectReferencesAreFlattened\Build\Projects\ExternalD.definition" />
+    <None Include="TestData\ExternalProjectReferencesAreFlattened\Build\Projects\ExternalE.definition" />
+    <None Include="TestData\ExternalProjectReferencesAreFlattened\Console\Program.cs" />
+    <None Include="TestData\ExtractXSLTWorks\Build\Module.xml" />
+    <None Include="TestData\ExtractXSLTWorks\Build\Projects\Console.definition" />
+    <None Include="TestData\ExtractXSLTWorks\Console\Program.cs" />
+    <None Include="TestData\NativeBinaryPresent\Build\Module.xml" />
+    <None Include="TestData\NativeBinaryPresent\Build\Projects\Console.definition" />
+    <None Include="TestData\NativeBinaryPresent\Build\Projects\Console.ThirdParty.definition" />
+    <None Include="TestData\NativeBinaryPresent\Console\Program.cs" />
+    <None Include="TestData\NuGetPackagesDetectedFromParent\Build\Module.xml" />
+    <None Include="TestData\NuGetPackagesDetectedFromParent\Build\Projects\.gitkeep" />
+    <None Include="TestData\NuGetPackagesDetectedFromParent\packages\Zlib.Portable.1.10.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Test.dll" />
+    <None Include="TestData\NuGetPackagesDetectedFromParent\Submodule\Build\Module.xml" />
+    <None Include="TestData\NuGetPackagesDetectedFromParent\Submodule\Build\Projects\Console.definition" />
+    <None Include="TestData\NuGetPackagesDetectedFromParent\Submodule\Console\packages.config" />
+    <None Include="TestData\NuGetPackagesDetectedFromParent\Submodule\Console\Program.cs" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDot\Build\Module.xml" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDot\Build\Projects\.gitkeep" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDot\packages\Zlib.Portable.1.10.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Test.dll" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDot\Submodule\Build\Module.xml" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDot\Submodule\Build\Projects\Console.definition" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDot\Submodule\packages.config" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDot\Submodule\Program.cs" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDotSlash\Build\Module.xml" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDotSlash\Build\Projects\.gitkeep" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDotSlash\packages\Zlib.Portable.1.10.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Test.dll" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDotSlash\Submodule\Build\Module.xml" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDotSlash\Submodule\Build\Projects\Console.definition" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDotSlash\Submodule\packages.config" />
+    <None Include="TestData\NuGetPackagesDetectedFromParentWithRootPathDotSlash\Submodule\Program.cs" />
+    <None Include="TestData\NuGetPortableLibraryDetected\Build\Module.xml" />
+    <None Include="TestData\NuGetPortableLibraryDetected\Build\Projects\Console.definition" />
+    <None Include="TestData\NuGetPortableLibraryDetected\Console\packages.config" />
+    <None Include="TestData\NuGetPortableLibraryDetected\Console\Program.cs" />
+    <None Include="TestData\NuGetPortableLibraryDetected\packages\Zlib.Portable.1.10.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Test.dll" />
+    <None Include="TestData\NuGetPortableLibraryDetectedWithRootPathDot\Build\Module.xml" />
+    <None Include="TestData\NuGetPortableLibraryDetectedWithRootPathDot\Build\Projects\Console.definition" />
+    <None Include="TestData\NuGetPortableLibraryDetectedWithRootPathDot\packages.config" />
+    <None Include="TestData\NuGetPortableLibraryDetectedWithRootPathDot\packages\Zlib.Portable.1.10.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Test.dll" />
+    <None Include="TestData\NuGetPortableLibraryDetectedWithRootPathDot\Program.cs" />
+    <None Include="TestData\NuGetPortableLibraryDetectedWithRootPathDotSlash\Build\Module.xml" />
+    <None Include="TestData\NuGetPortableLibraryDetectedWithRootPathDotSlash\Build\Projects\Console.definition" />
+    <None Include="TestData\NuGetPortableLibraryDetectedWithRootPathDotSlash\packages.config" />
+    <None Include="TestData\NuGetPortableLibraryDetectedWithRootPathDotSlash\packages\Zlib.Portable.1.10.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Test.dll" />
+    <None Include="TestData\NuGetPortableLibraryDetectedWithRootPathDotSlash\Program.cs" />
+    <None Include="TestData\PackageEverythingCorrectGZip\Filter.txt" />
+    <None Include="TestData\PackageEverythingCorrectGZip\Publish\Build\Module.xml" />
+    <None Include="TestData\PackageEverythingCorrectGZip\Publish\Build\Projects\Console.definition" />
+    <None Include="TestData\PackageEverythingCorrectGZip\Publish\Console\Program.cs" />
+    <None Include="TestData\PackageEverythingCorrectLZMA\Filter.txt" />
+    <None Include="TestData\PackageEverythingCorrectLZMA\Publish\Build\Module.xml" />
+    <None Include="TestData\PackageEverythingCorrectLZMA\Publish\Build\Projects\Console.definition" />
+    <None Include="TestData\PackageEverythingCorrectLZMA\Publish\Console\Program.cs" />
+    <None Include="TestData\PackageEverythingFailWhenBuildModuleXmlNotPresent\Filter.txt" />
+    <None Include="TestData\PackageEverythingFailWhenBuildModuleXmlNotPresent\Publish\Build\Projects\Console.definition" />
+    <None Include="TestData\PackageEverythingFailWhenBuildModuleXmlNotPresent\Publish\Console\Program.cs" />
+    <None Include="TestData\PackageEverythingFailWhenBuildNotPresent\Filter.txt" />
+    <None Include="TestData\PackageEverythingFailWhenBuildNotPresent\Publish\Console\Program.cs" />
+    <None Include="TestData\PackageEverythingFailWhenBuildProjectsNotPresent\Filter.txt" />
+    <None Include="TestData\PackageEverythingFailWhenBuildProjectsNotPresent\Publish\Build\Module.xml" />
+    <None Include="TestData\PackageEverythingFailWhenBuildProjectsNotPresent\Publish\Console\Program.cs" />
+    <None Include="TestData\PackageEverythingFailWhenProtobuildPresent\Filter.txt" />
+    <None Include="TestData\PackageEverythingFailWhenProtobuildPresent\Publish\Build\Module.xml" />
+    <None Include="TestData\PackageEverythingFailWhenProtobuildPresent\Publish\Build\Projects\Console.definition" />
+    <None Include="TestData\PackageEverythingFailWhenProtobuildPresent\Publish\Console\Program.cs" />
+    <None Include="TestData\PackageEverythingFailWhenProtobuildPresent\Publish\Protobuild.exe" />
+    <None Include="TestData\PackageFilterCorrect\Build\Module.xml" />
+    <None Include="TestData\PackageFilterCorrect\Build\Projects\Console.definition" />
+    <None Include="TestData\PackageFilterCorrect\Build\Publish\Console.Linux.definition" />
+    <None Include="TestData\PackageFilterCorrect\Build\Publish\Console.Windows.definition" />
+    <None Include="TestData\PackageFilterCorrect\Build\Publish\Filter.Linux.txt" />
+    <None Include="TestData\PackageFilterCorrect\Build\Publish\Filter.Windows.txt" />
+    <None Include="TestData\PackageFilterCorrect\Console\Program.cs" />
+    <None Include="TestData\PackageFilterCorrectModuleXml\Console.definition" />
+    <None Include="TestData\PackageFilterCorrectModuleXml\Filter.Windows.txt" />
+    <None Include="TestData\PackageFilterCorrectModuleXml\Module.xml" />
+    <None Include="TestData\ProjectSpecificOutputFolder\Build\Projects\ConsoleA.definition" />
+    <None Include="TestData\ProjectSpecificOutputFolder\Build\Projects\ConsoleB.definition" />
+    <None Include="TestData\ProjectSpecificOutputFolder\ConsoleA\Program.cs" />
+    <None Include="TestData\ProjectSpecificOutputFolder\ConsoleB\Program.cs" />
+    <None Include="TestData\ResyncPreventedWhenSyncIsDisabled\Build\Module.xml" />
+    <None Include="TestData\ResyncPreventedWhenSyncIsDisabled\Build\Projects\Console.definition" />
+    <None Include="TestData\ResyncPreventedWhenSyncIsDisabled\Console\Program.cs" />
     <None Include="TestData\ServicesBaseTest\Build\Projects\Console.definition" />
     <None Include="TestData\ServicesBaseTest\Console\Program.cs" />
     <None Include="TestData\ServicesBaseTest\Submodule\Build\Projects\Library.definition" />

@@ -11,3 +11,15 @@ Protobuild.Tests/TestData/**/Protobuild.exe
 *.speccache
 packages/repositories.config
 StyleCop.Cache
+/Protobuild.Tests/TestData/PackageEverythingCorrectGZip/Test.tar.gz
+/Protobuild.Tests/TestData/PackageEverythingCorrectLZMA/Test.tar.lzma
+/Protobuild.Tests/TestData/PackageFilterCorrect/Linux.tar.lzma
+/Protobuild.Tests/TestData/PackageFilterCorrect/Windows.tar.lzma
+/Protobuild.Tests/TestData/PackageFilterCorrectModuleXml/Windows.tar.lzma
+/Protobuild.Tests/TestData/ExtractXSLTWorks/Build/GenerateProject.xslt
+/Protobuild.Tests/TestData/ExtractXSLTWorks/Build/GenerateSolution.xslt
+/Protobuild.Tests/TestData/ExtractXSLTWorks/Build/GenerateProject.CSharp.xslt
+/Protobuild.Tests/TestData/NuGetPortableLibraryDetected/packages/repositories.config
+/Protobuild.Tests/TestData/NuGetPortableLibraryDetectedWithRootPathDot/packages/repositories.config
+/Protobuild.Tests/TestData/NuGetPortableLibraryDetectedWithRootPathDotSlash/packages/repositories.config
+/Protobuild.Tests/TestData/NuGetPackagesDetectedFromParent/Submodule/packages/repositories.config

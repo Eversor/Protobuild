@@ -2,66 +2,58 @@
 <Project Name="Protobuild" Path="Protobuild" Type="Console">
   <Properties />
   <References>
-    <Reference Include="Microsoft.Build" />
-    <Reference Include="Microsoft.Build.Framework" />
-    <Reference Include="Microsoft.Build.Tasks.v4.0" />
-    <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Windows.Forms" />
   </References>
   <Files>
-    <Compile Include="Actions.cs" />
-    <Compile Include="BuildResources\ResourceExtractor.cs" />
-    <Compile Include="DefinitionInfo.cs" />
-    <Compile Include="DefinitionTemplates\BaseTemplate.cs" />
-    <Compile Include="DefinitionTemplates\ConsoleTemplate.cs" />
-    <Compile Include="DefinitionTemplates\ContentTemplate.cs" />
-    <Compile Include="DefinitionTemplates\ExternalTemplate.cs" />
-    <Compile Include="DefinitionTemplates\GTKTemplate.cs" />
-    <Compile Include="DefinitionTemplates\GUITemplate.cs" />
-    <Compile Include="DefinitionTemplates\LibraryTemplate.cs" />
-    <Compile Include="DefinitionTemplates\ModuleTemplate.cs" />
-    <Compile Include="DefinitionTemplates\TestsTemplate.cs" />
-    <Compile Include="DefinitionTemplates\WebsiteTemplate.cs" />
-    <Compile Include="DefinitionTemplates\XNATemplate.cs" />
-    <Compile Include="EmbeddedResourceResolver.cs" />
-    <Compile Include="JSILProvider.cs" />
-    <Compile Include="KickstartForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="..\ThirdParty\LZMA\CRC.cs">
+      <Link>LZMA\CRC.cs</Link>
     </Compile>
-    <Compile Include="KickstartForm.Designer.cs">
-      <DependentUpon>KickstartForm.cs</DependentUpon>
+    <Compile Include="..\ThirdParty\LZMA\ICoder.cs">
+      <Link>LZMA\ICoder.cs</Link>
     </Compile>
-    <Compile Include="ModuleInfo.cs" />
-    <Compile Include="Options.cs" />
+    <Compile Include="..\ThirdParty\LZMA\IMatchFinder.cs">
+      <Link>LZMA\IMatchFinder.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\InBuffer.cs">
+      <Link>LZMA\InBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzBinTree.cs">
+      <Link>LZMA\LzBinTree.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzInWindow.cs">
+      <Link>LZMA\LzInWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzmaBase.cs">
+      <Link>LZMA\LzmaBase.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzmaDecoder.cs">
+      <Link>LZMA\LzmaDecoder.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzmaEncoder.cs">
+      <Link>LZMA\LzmaEncoder.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzmaHelper.cs">
+      <Link>LZMA\LzmaHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzOutWindow.cs">
+      <Link>LZMA\LzOutWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\OutBuffer.cs">
+      <Link>LZMA\OutBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\RangeCoder.cs">
+      <Link>LZMA\RangeCoder.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\RangeCoderBit.cs">
+      <Link>LZMA\RangeCoderBit.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\RangeCoderBitTree.cs">
+      <Link>LZMA\RangeCoderBitTree.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="ProjectReader\CSharpProject.cs" />
-    <Compile Include="ProjectReader\DefinitionSynchroniser.cs" />
-    <Compile Include="ProjectReader\XmlElementUtility.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Service.cs" />
-    <Compile Include="Services\ServiceManager.cs" />
-    <Compile Include="Tasks\BaseTask.cs" />
-    <Compile Include="Tasks\CleanProjectsTask.cs" />
-    <Compile Include="Tasks\DocumentExtensions.cs" />
-    <Compile Include="Tasks\GenerateProjectsTask.cs" />
-    <Compile Include="Tasks\ProjectGenerator.cs" />
-    <Compile Include="Tasks\SyncProjectsTask.cs" />
-    <EmbeddedResource Include="BuildResources\GenerateProject.xslt.gz" />
-    <EmbeddedResource Include="BuildResources\GenerateSolution.xslt.gz" />
-    <EmbeddedResource Include="BuildResources\JSILTemplate.htm.gz" />
-    <EmbeddedResource Include="BuildResources\ProtobuildManager.exe.gz" />
-    <EmbeddedResource Include="KickstartForm.resx">
-      <DependentUpon>KickstartForm.cs</DependentUpon>
+    <EmbeddedResource Include="Protobuild.Internal.dll.lzma">
+      <LogicalName>Protobuild.Internal.dll.lzma</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProjectReader\LineariseProject.xslt" />
-    <EmbeddedResource Include="ProjectReader\WashNamespaces.xslt" />
-    <None Include="BuildResources\GenerateProject.xslt" />
-    <None Include="BuildResources\GenerateSolution.xslt" />
-    <None Include="BuildResources\JSILTemplate.htm" />
   </Files>
 </Project>

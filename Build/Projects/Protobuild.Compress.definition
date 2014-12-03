@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="Protobuild.Compress" Path="Protobuild.Compress" Type="Console">
+  <Properties />
+  <References>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </References>
+  <Files>
+    <Compile Include="..\ThirdParty\LZMA\CRC.cs">
+      <Link>LZMA\CRC.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\ICoder.cs">
+      <Link>LZMA\ICoder.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\IMatchFinder.cs">
+      <Link>LZMA\IMatchFinder.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\InBuffer.cs">
+      <Link>LZMA\InBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzBinTree.cs">
+      <Link>LZMA\LzBinTree.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzInWindow.cs">
+      <Link>LZMA\LzInWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzmaBase.cs">
+      <Link>LZMA\LzmaBase.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzmaDecoder.cs">
+      <Link>LZMA\LzmaDecoder.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzmaEncoder.cs">
+      <Link>LZMA\LzmaEncoder.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzmaHelper.cs">
+      <Link>LZMA\LzmaHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\LzOutWindow.cs">
+      <Link>LZMA\LzOutWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\OutBuffer.cs">
+      <Link>LZMA\OutBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\RangeCoder.cs">
+      <Link>LZMA\RangeCoder.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\RangeCoderBit.cs">
+      <Link>LZMA\RangeCoderBit.cs</Link>
+    </Compile>
+    <Compile Include="..\ThirdParty\LZMA\RangeCoderBitTree.cs">
+      <Link>LZMA\RangeCoderBitTree.cs</Link>
+    </Compile>
+    <Compile Include="Program.cs" />
+  </Files>
+</Project>
